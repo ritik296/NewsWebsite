@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import NewsCollection from "./components/NewsCollection";
+import Category from "./activity/Category";
+import Country from "./activity/Country";
+import ContactUs from "./activity/ContactUs";
+// import { Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        {/* {fetchNewsFromApi()} */}
+        <Navbar />
+        {/* <NewsCollection/> */}
+        {/* <Category /> */}
+
+        <Switch>
+          <Route path="/category">
+            <Category />
+          </Route>
+          <Route path="/country">
+            <Country />
+          </Route>
+          <Route path="/contactUs">
+            <ContactUs />
+          </Route>
+          <Route path="/">
+            <NewsCollection />
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
-
 export default App;

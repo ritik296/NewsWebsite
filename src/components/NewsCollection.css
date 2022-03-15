@@ -1,0 +1,13 @@
+.card-view{
+    /* width: 0rem; */
+    max-width: 45rem;
+    min-width: 23rem;
+    min-height: 23rem;
+    max-height: 30.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 19px;
+    /* box-shadow: 0 0 0px rgba(0, 0, 0, 0.5); */
+    /* margin: 6px; */
+    /* background-color: black; */
+}
