@@ -1,8 +1,16 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+// import {useCallback} from 'react';
+// import {useNavigate} from 'react-router-dom'
 
 export default function Navbar() {
+  function searchNews() {
+    // let searchTxt = document.getElementById('searchTxt');
+    // var query = searchTxt.value;
+    // console.log(query);
+  }
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark text-white sticky-top navbar-header">
       <div className="container-fluid">
@@ -26,7 +34,11 @@ export default function Navbar() {
           <div className="mid ">
             <ul className="nav_item navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-Link active link" aria-current="page" to="/">
+                <Link
+                  className="nav-Link active link"
+                  aria-current="page"
+                  to="/"
+                >
                   Home
                 </Link>
               </li>
@@ -52,16 +64,24 @@ export default function Navbar() {
               <input
                 type="search"
                 className="form-control me-2 "
+                id="searchTxt"
                 placeholder="Search article here"
                 aria-label="Search article here"
               />
-              <button className="search_btn" id="search_button">
-                <img
-                  className="search_image"
-                  src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-5.png"
-                  alt=""
-                />
-              </button>
+              <Link className="" to={"/search/q="}>
+                <button
+                  className="search_btn"
+                  id="search_button"
+                  // onClick={searchNews}
+                  // onClick={searchNews}
+                >
+                  <img
+                    className="search_image"
+                    src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-5.png"
+                    alt=""
+                  />
+                </button>
+              </Link>
             </div>
             <button className="btn btn-outline-success" id="login">
               Login

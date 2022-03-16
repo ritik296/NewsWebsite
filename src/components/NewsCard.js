@@ -25,7 +25,6 @@ export default function NewsCard(props) {
         {new Date(props.publishAt).toGMTString()}
       </p>
     </div>
-    // </div>
   );
 }
 

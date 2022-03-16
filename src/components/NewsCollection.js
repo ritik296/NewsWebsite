@@ -4,13 +4,13 @@ import './NewsCollection.css'
 
 const API_KEY = "5e8fc64fe18445be9d6fdd76593fed2f";
 const END_POINT = ["top-headlines", "everything"];
-const PAGE_NO = 0;
 
 export default function NewsCollection(props) {
   const [article, setArticles] = useState([]);
   const [endPointMain, setEndPoint] = useState(END_POINT[0]);
   const [country, setCountry] = useState("us");
   const [category, setCategory] = useState("");
+  // const [PAGE_NO, setPAGE_NO] = useState(0);
 
   useEffect(() => {
     componentDidMount();
@@ -22,8 +22,9 @@ export default function NewsCollection(props) {
     setEndPoint(props.endPoint);
     setCountry(props.COUNTRY);
     setCategory(props.CATEGORY);
+    // setCategory(props.PageNo);
 
-    let NEWS_BASE_URL = `https://newsapi.org/v2/${END_POINT[props.endPoint]}?q=${props.QUERY}&country=${props.COUNTRY}&category=${props.CATEGORY}&apiKey=${API_KEY}&pageSize=30&page=${PAGE_NO}&sortBy=${props.SORT_BY}&language=en`;
+    let NEWS_BASE_URL = `https://newsapi.org/v2/${END_POINT[props.endPoint]}?q=${props.QUERY}&country=${props.COUNTRY}&category=${props.CATEGORY}&apiKey=${API_KEY}&pageSize=30&page=${props.PageNo}&sortBy=${props.SORT_BY}&language=en`;
 
     let data = await fetch(NEWS_BASE_URL);
     let parsedData = await data.json();
@@ -59,5 +60,6 @@ NewsCollection.defaultProps = {
     QUERY : '',
     COUNTRY : 'in',
     CATEGORY : '',
-    SORT_BY : ''
+    SORT_BY : '',
+    PAGE_NO : 0
 }

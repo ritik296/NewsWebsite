@@ -6,19 +6,6 @@ const CategoryList = ['business', 'entertainment', 'general', 'health', 'science
 var country = "";
 
 export default function Category() {
-
-  // function switchCountry(){
-  //   let countrySwitch = document.getElementById("setck");
-  //   if(countrySwitch.checked){
-  //     console.log(countrySwitch.checked);
-  //     country = "in";
-  //   } else {
-  //     console.log(countrySwitch.checked);
-  //     country = "";
-  //   }
-  //   return country;
-  // }
-
   return (
     // <div>hello</div>
     <>

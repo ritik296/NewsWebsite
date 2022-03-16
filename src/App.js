@@ -5,7 +5,9 @@ import NewsCollection from "./components/NewsCollection";
 import Category from "./activity/Category";
 import Country from "./activity/Country";
 import ContactUs from "./activity/ContactUs";
+import SearchNews from "./activity/SearchNews";
 // import { Switch, Route } from "react-router-dom";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -23,6 +25,9 @@ function App() {
         {/* <Category /> */}
 
         <Switch>
+          <Route path={'/search/q='}>
+            <SearchNews/>
+          </Route>
           <Route path="/category">
             <Category />
           </Route>

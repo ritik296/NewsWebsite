@@ -16,9 +16,8 @@
 }
 
 .news-card:hover{
-    /* margin-top: 2rem; */
-    border-radius: 13px;
-    transform: scale(1.2);
+    border-radius: 5px;
+    transform: scale(1.06);
     z-index: 1;
-    border: 3px solid black;
+    border: 2px solid black;
 }
