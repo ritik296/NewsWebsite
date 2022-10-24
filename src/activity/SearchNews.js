@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import NewsCollection from "../components/NewsCollection";
 import NewsCard from "../components/NewsCard";
 
-const API_KEY = "5e8fc64fe18445be9d6fdd76593fed2f";
+const API_KEY = "916d5a0df7dd4da08b6af5cfb02e8ea2";
 
 export default function SearchNews() {
   const [query, setQuery] = useState("all");

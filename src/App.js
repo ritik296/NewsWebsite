@@ -20,7 +20,7 @@ function App() {
     <>
       <Router>
         {/* {fetchNewsFromApi()} */}
-        <Navbar />
+        <Navbar/>
         {/* <NewsCollection/> */}
         {/* <Category /> */}
 
@@ -29,16 +29,16 @@ function App() {
             <SearchNews/>
           </Route>
           <Route path="/category">
-            <Category />
+            <Category/>
           </Route>
           <Route path="/country">
-            <Country />
+            <Country/>
           </Route>
           <Route path="/contactUs">
-            <ContactUs />
+            <ContactUs/>
           </Route>
           <Route path="/">
-            <NewsCollection />
+            <NewsCollection/>
           </Route>
         </Switch>
       </Router>
